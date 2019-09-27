@@ -1,0 +1,26 @@
+﻿<Controls:MetroWindow x:Class="FishTrapTimer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FishTrapTimer"
+        mc:Ignorable="d"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        Title="통발 타이머" Height="423.425" Width="404.5"
+        Loaded="MetroWindow_Loaded"
+        Closed="Window_Closed"
+        Icon="icon.ico">
+    <Grid>
+        <Button x:Name="btn" Content="시작" Margin="0,0,10,10" HorizontalAlignment="Right" Width="104" Height="30" VerticalAlignment="Bottom" Click="Button_Click"/>
+        <ComboBox SelectionChanged="Cmb_Process_SelectionChanged" x:Name="cmb_Process" Margin="10,10,10,0" VerticalAlignment="Top" Height="28"/>
+        <Button Click="Button_Click_1" Content="새로고침" Margin="0,43,10,0" Height="32" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
+        <Label x:Name="lbl_Timer" FontSize="36px" Content="00:00:00.00" HorizontalContentAlignment="Center" Margin="0,0,0,170" Height="61" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="txt_Top" Controls:TextBoxHelper.Watermark="Top-Offset" HorizontalAlignment="Left" Height="23" Margin="10,0,0,45" TextWrapping="Wrap" Text="" Width="82" PreviewTextInput="NumberValidationTextBox" TextChanged="TextBox_TextChanged" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="txt_Left" Controls:TextBoxHelper.Watermark="Left-Offset" HorizontalAlignment="Left" Height="23" Margin="97,0,0,45" TextWrapping="Wrap" Text="" Width="82" PreviewTextInput="NumberValidationTextBox" TextChanged="TextBox_TextChanged" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="txt_Bot" Controls:TextBoxHelper.Watermark="Bot-Offset" HorizontalAlignment="Left" Height="23" Margin="10,0,0,14" TextWrapping="Wrap" Text="" Width="82" PreviewTextInput="NumberValidationTextBox" TextChanged="TextBox_TextChanged" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="txt_Right" Controls:TextBoxHelper.Watermark="Right-Offset" HorizontalAlignment="Left" Height="23" Margin="97,0,0,14" TextWrapping="Wrap" Text="" Width="82" PreviewTextInput="NumberValidationTextBox" TextChanged="TextBox_TextChanged" VerticalAlignment="Bottom"/>
+
+
+    </Grid>
+</Controls:MetroWindow>
